@@ -104,7 +104,7 @@ def forceConverter(forceRegisterValue):
   forceRegisterBin="0"*(16-len(forceRegisterBin))+forceRegisterBin
   if forceRegisterBin[0]=="1":
     #negative force
-    force=-1*(int("1111111111111111",2)-int(forceRegisterBin[1:],2)+1)/100
+    force=-1*(int("1111111111111111",2)-int(forceRegisterBin,2)+1)/100
   else:
     #positive force
     force=int(forceRegisterBin,2)/100
@@ -125,7 +125,7 @@ def torqueConverter(torqueRegisterValue):
   torqueRegisterBin="0"*(16-len(torqueRegisterBin))+torqueRegisterBin
   if torqueRegisterBin[0]=="1":
     #negative force
-    torque=-1*(int("1111111111111111",2)-int(torqueRegisterBin[1:],2)+1)/1000
+    torque=-1*(int("1111111111111111",2)-int(torqueRegisterBin,2)+1)/1000
   else:
     #positive force
     torque=int(torqueRegisterBin,2)/1000
